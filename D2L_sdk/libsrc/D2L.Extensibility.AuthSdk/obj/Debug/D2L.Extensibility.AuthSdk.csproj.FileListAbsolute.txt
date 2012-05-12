@@ -1,0 +1,7 @@
+C:\Users\Shafer\SkyDrive\Code12\D2L\D2L_sdk\libsrc\D2L.Extensibility.AuthSdk\bin\Debug\D2L.Extensibility.AuthSdk.dll
+C:\Users\Shafer\SkyDrive\Code12\D2L\D2L_sdk\libsrc\D2L.Extensibility.AuthSdk\bin\Debug\D2L.Extensibility.AuthSdk.pdb
+C:\Users\Shafer\SkyDrive\Code12\D2L\D2L_sdk\libsrc\D2L.Extensibility.AuthSdk\bin\Debug\StructureMap.dll
+C:\Users\Shafer\SkyDrive\Code12\D2L\D2L_sdk\libsrc\D2L.Extensibility.AuthSdk\bin\Debug\StructureMap.xml
+C:\Users\Shafer\SkyDrive\Code12\D2L\D2L_sdk\libsrc\D2L.Extensibility.AuthSdk\obj\Debug\D2L.Extensibility.AuthSdk.csprojResolveAssemblyReference.cache
+C:\Users\Shafer\SkyDrive\Code12\D2L\D2L_sdk\libsrc\D2L.Extensibility.AuthSdk\obj\Debug\D2L.Extensibility.AuthSdk.dll
+C:\Users\Shafer\SkyDrive\Code12\D2L\D2L_sdk\libsrc\D2L.Extensibility.AuthSdk\obj\Debug\D2L.Extensibility.AuthSdk.pdb

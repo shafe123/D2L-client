@@ -1,0 +1,5 @@
+C:\Users\Shafer\SkyDrive\Code12\D2L\JsonNet\Source\Src\Newtonsoft.Json\bin\Debug\Net40\Newtonsoft.Json.dll
+C:\Users\Shafer\SkyDrive\Code12\D2L\JsonNet\Source\Src\Newtonsoft.Json\bin\Debug\Net40\Newtonsoft.Json.pdb
+C:\Users\Shafer\SkyDrive\Code12\D2L\JsonNet\Source\Src\Newtonsoft.Json\obj\Debug\Newtonsoft.Json.csprojResolveAssemblyReference.cache
+C:\Users\Shafer\SkyDrive\Code12\D2L\JsonNet\Source\Src\Newtonsoft.Json\obj\Debug\Newtonsoft.Json.dll
+C:\Users\Shafer\SkyDrive\Code12\D2L\JsonNet\Source\Src\Newtonsoft.Json\obj\Debug\Newtonsoft.Json.pdb

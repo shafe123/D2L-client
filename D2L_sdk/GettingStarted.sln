@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "GettingStarted", "samples\GettingStarted\", "{AAC2B9F4-9C0D-4389-B4B3-81AB31EA36AE}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/GettingStarted"
+		Debug.AspNetCompiler.PhysicalPath = "samples\GettingStarted\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\GettingStarted\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/GettingStarted"
+		Release.AspNetCompiler.PhysicalPath = "samples\GettingStarted\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\GettingStarted\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "63208"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D2L.Extensibility.AuthSdk", "libsrc\D2L.Extensibility.AuthSdk\D2L.Extensibility.AuthSdk.csproj", "{2809EA0A-360C-48F2-B24A-F7244876135A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AAC2B9F4-9C0D-4389-B4B3-81AB31EA36AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAC2B9F4-9C0D-4389-B4B3-81AB31EA36AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAC2B9F4-9C0D-4389-B4B3-81AB31EA36AE}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAC2B9F4-9C0D-4389-B4B3-81AB31EA36AE}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{2809EA0A-360C-48F2-B24A-F7244876135A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2809EA0A-360C-48F2-B24A-F7244876135A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2809EA0A-360C-48F2-B24A-F7244876135A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2809EA0A-360C-48F2-B24A-F7244876135A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
