@@ -1,0 +1,8 @@
+C:\Users\Shafer\SkyDrive\Code12\D2L\DSU_D2L\D2LDotNet\D2LDotNet\obj\Debug\D2LDotNet.csprojResolveAssemblyReference.cache
+C:\Users\Shafer\SkyDrive\Code12\D2L\DSU_D2L\D2LDotNet\D2LDotNet\bin\Debug\D2LDotNet.dll
+C:\Users\Shafer\SkyDrive\Code12\D2L\DSU_D2L\D2LDotNet\D2LDotNet\bin\Debug\D2LDotNet.pdb
+C:\Users\Shafer\SkyDrive\Code12\D2L\DSU_D2L\D2LDotNet\D2LDotNet\obj\Debug\D2LDotNet.dll
+C:\Users\Shafer\SkyDrive\Code12\D2L\DSU_D2L\D2LDotNet\D2LDotNet\obj\Debug\D2LDotNet.pdb
+C:\Users\Shafer\SkyDrive\Code12\D2L\DSU_D2L\D2LDotNet\D2LDotNet\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Shafer\SkyDrive\Code12\D2L\DSU_D2L\D2LDotNet\D2LDotNet\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\Shafer\SkyDrive\Code12\D2L\DSU_D2L\D2LDotNet\D2LDotNet\bin\Debug\Newtonsoft.Json.xml
