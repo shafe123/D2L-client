@@ -7,9 +7,9 @@ namespace D2LDotNet.Model
 {
     public class APICall
     {
-        public APICall(string method, string path)
+        public APICall(HttpMethod method, string path)
         {
-            this.method = method.ToString();
+            this.method = Utilities.ConvertHttpMethod(method);
             this.path = path;
         }
 

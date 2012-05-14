@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Security.Cryptography;
 using D2LDotNet.Model;
+using System.Net;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace D2LDotNet
 {
@@ -58,15 +61,78 @@ namespace D2LDotNet
             return "x_t=" + timestamp;
         }
 
-        public static string ApplicationLevelQueryString(APICall ApiCall)
+        public static string ApplicationLevelRequest(APICall ApiCall)
         {
             string timestamp = UnixTimeStampString();
+            Uri SendToD2L = new Uri(D2LSettings.D2LWebAddress + ApiCall.path);
+
+            UriBuilder build = new UriBuilder(SendToD2L);
             
             string query = Getx_a();
             query += "&" + Getx_c(ApiCall.method, ApiCall.path, timestamp);
             query += "&" + Getx_t(timestamp);
 
-            return query;
+            build.Query = query;
+
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(build.Uri);
+            return MakeRequest(request, ApiCall.method);
+        }
+
+        public static string MakeRequest(HttpWebRequest request, string method)
+        {
+            string result;
+            request.Method = method;
+
+            try
+            {
+                using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
+                {
+                    using (Stream stream = response.GetResponseStream())
+                    {
+                        using (StreamReader reader = new StreamReader(stream, Encoding.UTF8))
+                        {
+                            result = reader.ReadToEnd();
+                        }
+                    }
+                }
+            }
+            catch (WebException e)
+            {
+                result = "";   
+            }
+
+            return result;
+        }
+
+        public static string ConvertHttpMethod(HttpMethod method)
+        {
+            string httpMethod;
+
+            switch (method)
+            {
+                case HttpMethod.Get:
+                    httpMethod = "GET";
+                    break;
+                case HttpMethod.Post:
+                    httpMethod = "POST";
+                    break;
+                case HttpMethod.Put:
+                    httpMethod = "PUT";
+                    break;
+                case HttpMethod.Delete:
+                    httpMethod = "DELETE";
+                    break;
+                default:
+                    httpMethod = "";
+                    break;
+            }
+
+            return httpMethod;
+        }
+
+        public static T Deserialize<T>(string json) where T : class
+        {
+            return JsonConvert.DeserializeObject<T>(json);
         }
     }
 }

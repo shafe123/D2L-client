@@ -5,7 +5,6 @@ using System.Text;
 using D2LDotNet.Model;
 using System.Net;
 using System.IO;
-using Newtonsoft.Json;
 
 namespace D2LDotNet.API
 {
@@ -19,40 +18,40 @@ namespace D2LDotNet.API
         public static ProductVersion[] GetProductVersions()
         {
             string path = "/d2l/api/versions/";
-            Uri SendToD2L = new Uri(D2LSettings.D2LWebAddress + path);
-            string method = HttpMethod.Get;
 
-            //Append the query to the original URI
-            UriBuilder build = new UriBuilder(SendToD2L);
-            build.Query = Utilities.ApplicationLevelQueryString(new APICall(method, path));
-            Uri final = build.Uri;
+            string json = Utilities.ApplicationLevelRequest(new APICall(HttpMethod.Get, path));
+            ProductVersion[] versions = Utilities.Deserialize<ProductVersion[]>(json);
 
-            //Send the request
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(final);
-            request.Method = method;
+            return versions;
+        }
 
-            try
+        //version is the number (for example: 1.0)
+        public static SupportedVersion GetSupportedVersions(D2LPRODUCT product, string version)
+        {
+            string productCode = "";
+            switch (product)
             {
-                using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
-                {
-                    using (Stream stream = response.GetResponseStream())
-                    {
-                        using (StreamReader reader = new StreamReader(stream, Encoding.UTF8))
-                        {
-                            string responseBody = reader.ReadToEnd();
-
-                            ProductVersion[] versions = JsonConvert.DeserializeObject<ProductVersion[]>(responseBody);
-
-                            return versions;
-                        }
-                    }
-                }
+                case D2LPRODUCT.ePortfolio:
+                    productCode = "ep";
+                    break;
+                case D2LPRODUCT.LearningEnvironment:
+                    productCode = "le";
+                    break;
+                case D2LPRODUCT.LearningPlatform:
+                    productCode = "lp";
+                    break;
+                case D2LPRODUCT.LearningRepository:
+                    productCode = "lr";
+                    break;
             }
-            //catches status codes in the 4 and 5 hundred series
-            catch (WebException we)
-            {
-                return null;
-            }
+                    
+
+            string path = "/d2l/api/" + productCode + "/versions/" + version;
+
+            string json = Utilities.ApplicationLevelRequest(new APICall(HttpMethod.Get, path));
+            SupportedVersion supportedVersion = Utilities.Deserialize<SupportedVersion>(json);
+
+            return supportedVersion;
         }
     }
 }

@@ -5,11 +5,6 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using D2LDotNet;
-using System.Text;
-using System.Security.Cryptography;
-using System.Net;
-using System.IO;
-using Newtonsoft.Json;
 using D2LDotNet.Model;
 using D2LDotNet.API;
 
@@ -25,5 +20,11 @@ public partial class _Default : System.Web.UI.Page
                 Response.Write(v2 + "<br />");
             Response.Write("<br />");
         }
+
+        SupportedVersion support = APIProperties.GetSupportedVersions(D2LPRODUCT.ePortfolio, "1.0");
+        Response.Write("Is 1.0 supported?" + "<br />" + support.Supported.ToString() + "<br/ >");
+
+        support = APIProperties.GetSupportedVersions(D2LPRODUCT.ePortfolio, "2.0");
+        Response.Write("Is 2.0 supported?" + "<br />" + support.Supported.ToString() + "<br/ >");
     }
 }

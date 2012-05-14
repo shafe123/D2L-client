@@ -44,8 +44,11 @@
     <Compile Include="Model\APIProperties.cs" />
     <Compile Include="D2LSettings.cs" />
     <Compile Include="Model\APICall.cs" />
+    <Compile Include="Model\D2LPRODUCT.cs" />
     <Compile Include="Model\ProductVersion.cs" />
+    <Compile Include="Model\SupportedVersion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequestResult.cs" />
     <Compile Include="Utilities.cs" />
   </ItemGroup>
   <ItemGroup />
